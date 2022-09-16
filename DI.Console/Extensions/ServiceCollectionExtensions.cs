@@ -1,5 +1,6 @@
 ﻿using DI.Console.Services;
 using DI.Console.Services.Abstractions;
+using DI.Core.Extensions;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DI.Console.Extensions;
@@ -9,6 +10,9 @@ public static class ServiceCollectionExtensions
     public static IServiceCollection ConfigureServices(this IServiceCollection services)
     {
         services.AddScoped<IConsoleService, ConsoleService>();
+
+        services.ConfigureSendGridService(config => config.Apikey = "Welcome");
+
         return services;
     }
 

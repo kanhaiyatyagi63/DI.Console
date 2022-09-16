@@ -4,8 +4,6 @@ using DI.Console.Services.Abstractions;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 
-Console.WriteLine("Hello, World!");
-
 //How to create scope in console application
 using IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((_, services) => services.ConfigureServices())
