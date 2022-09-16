@@ -11,7 +11,7 @@ public static class ServiceCollectionExtensions
     {
         services.AddScoped<IConsoleService, ConsoleService>();
 
-        services.ConfigureSendGridService(config => config.Apikey = "Welcome");
+        services.ConfigureSendGridService(config => config.ApiKey = "Welcome");
 
         return services;
     }
